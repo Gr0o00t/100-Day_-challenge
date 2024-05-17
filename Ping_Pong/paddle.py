@@ -15,4 +15,5 @@ class Paddle(Turtle):
             new_segment.penup()
             new_segment.goto(position)
             self.segments.append(new_segment)
+           45
 
