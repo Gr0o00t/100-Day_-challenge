@@ -1,13 +1,9 @@
-from turtle import Turtle,Screen
+from turtle import Screen
 from paddle import Paddle
 from scoreboard import Scoreboard
 from ball import Ball
-import time
 
-Starting_POSITIONS = [(-280,0),(280,0)]
 
-player_1=Paddle()
-player_2=Paddle()
 score=Scoreboard()
 ball=Ball()
 
@@ -17,16 +13,17 @@ screen.bgcolor("black")
 screen.title("Ping_Pong")
 screen.tracer(0)
 
-player_1.create_paddle()
-player_1.position(-360,0)
-player_2.create_paddle()
-player_2.position(360,0)
+player_1=Paddle((350,0))
+player_2=Paddle((-350,0))
 
+screen.listen()
+screen.onkey(player_1.go_up, "w")
+screen.onkey(player_1.go_down, "s")
+screen.onkey(player_2.go_up, "Up")
+screen.onkey(player_2.go_down, "Down")
 
 game_is_on = 'True'
 while game_is_on:
     screen.update()
-    time.sleep(0.1)
-
 
 screen.exitonclick()

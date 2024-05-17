@@ -1,19 +1,20 @@
 from turtle import Turtle
-STARTING_POSITIONS = [(0,-40),(0,-20),(0,0),(0,20),(0,40)]
+
 
 class Paddle(Turtle):
 
-    def __init__(self):
+    def __init__(self,position):
         super().__init__()
-        self.segments= []
-        self.create_paddle()
+        self.shape("square")
+        self.color("white")
+        self.shapesize(stretch_wid=5, stretch_len=1)
+        self.penup()
+        self.goto(position)
 
-    def create_paddle(self):
-        for position in STARTING_POSITIONS:
-            new_segment = Turtle("square")
-            new_segment.color("white")
-            new_segment.penup()
-            new_segment.goto(position)
-            self.segments.append(new_segment)
+    def go_up(self):
+        y_cor= self.ycor() + 20
+        self.goto(self.xcor(),y_cor)
 
-
+    def go_down(self):
+        y_cor = self.ycor() - 20
+        self.goto(self.xcor(), y_cor)
