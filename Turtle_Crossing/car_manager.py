@@ -28,7 +28,7 @@ class CarManager():
             car.forward(self.car_speed)
 
     def inc_speed(self):
-        self.car_speed +=1
+        self.car_speed +=2
 
 
 
