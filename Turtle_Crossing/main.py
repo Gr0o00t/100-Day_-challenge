@@ -32,7 +32,7 @@ while game_is_on:
     for car in car_manager.all_cars:
         if car.distance(player_1) < 20:
             game_is_on = False
-
+            level.Game_Over()
 
     if player_1.Finish_race():
         level.score = level.score + 1
