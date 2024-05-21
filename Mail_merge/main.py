@@ -6,5 +6,5 @@ with open("./Input/Names/invited_names.txt") as invited_names:
     for name in names:
         stripped=name.strip()
         letter = letter.replace("[name]", stripped)
-        with open(f"./Output/ReadyToSend/letter_for_{stripped}.txt", mode='w') as file:
+        with open(f"./Output/ReadyToSend/Letter_for_{stripped}.txt", mode='w') as file:
             file.write(letter)
