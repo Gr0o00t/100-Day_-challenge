@@ -41,6 +41,7 @@ while game_is_on:
     for segment in snake.segments:
         if segment == snake.head:
             pass
+            print()
         elif snake.head.distance(segment) < 10:
             scoreboard.reset()
             snake.reset_game()
