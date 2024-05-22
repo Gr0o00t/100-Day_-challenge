@@ -6,7 +6,7 @@ cinnamon = len(data[data["Primary Fur Color"] == "Cinnamon"] )
 Black = len(data[data["Primary Fur Color"] == "Black"] )
 
 dict = {
-    "Primary Fur Color" :  ['Gray', 'Cinnamon', 'Black'],
+    "Primary Fur Color" :  ['Grays', 'Cinnamon', 'Black'],
     "count" : [grey,cinnamon,Black]
 }
 
