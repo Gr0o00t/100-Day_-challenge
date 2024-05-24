@@ -1,4 +1,4 @@
-    import turtle
+import turtle
 import pandas
 
 screen = turtle.Screen()
