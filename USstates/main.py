@@ -24,8 +24,7 @@ while len(guessed_states) < 50:
         break
     if answer_state in all_states:
         guessed_states.append(answer_state)
-        t = turtle.Turtle()
-        t.hideturtle()
+
         t.penup()
         state_data = data[data.state == answer_state]
         t.goto(int(state_data.x), int(state_data.y))
