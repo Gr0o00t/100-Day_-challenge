@@ -8,4 +8,4 @@ returna = { rows.letter:rows.code for (index,rows) in aplha.iterrows()}
 
 output = [ returna[lette] for lette in name]
 
-print (output1)
+print (output)
